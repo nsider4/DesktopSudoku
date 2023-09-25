@@ -83,12 +83,13 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View, EventHand
      */
     private void drawUI() {
         mistakesText = new Text("Mistakes: ");
+        mistakesText.setFont(new Font(30));
 
         Button newGameButton = new Button("New Game");
         newGameButton.setOnAction(event -> showDialog(Messages.NEW_GAME, Difficulty.EASY));
 
-        AnchorPane.setTopAnchor(mistakesText, 10.0);
-        AnchorPane.setLeftAnchor(mistakesText, 10.0);
+        AnchorPane.setTopAnchor(mistakesText, 40.0);
+        AnchorPane.setLeftAnchor(mistakesText, 30.0);
         AnchorPane.setTopAnchor(newGameButton, 560.0);
         AnchorPane.setLeftAnchor(newGameButton, 15.0);
         AnchorPane.setRightAnchor(newGameButton, 15.0);
