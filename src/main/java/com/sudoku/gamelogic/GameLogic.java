@@ -21,6 +21,7 @@ public class GameLogic {
      */
     public static SudokuGame getNewGame(Difficulty.DifficultyEnum difficulty) {
         Mistakes.resetMistakes();
+        UserInterfaceImpl.getDifficultyText().setText("Difficulty: " + difficulty);
         return new SudokuGame(
                 GameState.NEW,
                 GameGenerator.getNewGameGrid(difficulty),
