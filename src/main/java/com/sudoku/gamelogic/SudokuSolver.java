@@ -74,7 +74,7 @@ public class SudokuSolver {
     }
 
     /*
-    Loads the coordinates for all cells/boxes to fill
+    Loads the coordinates for all filled cells/boxes
 
     @param int[][] puzzle       -     The current grid
     @param int filledCells      -     The amount of filled cells/boxes in the Sudoku board
