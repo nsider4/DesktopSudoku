@@ -30,7 +30,7 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View, EventHand
     private final AnchorPane anchorPane1;
     private final AnchorPane anchorPane2;
     private final BorderPane root;
-    private static Text mistakesText;
+    private static Text mistakesText, difficultyText;
     private final HashMap<Coordinates, SudokuTextField> textFieldCoordinates;
     private IUserInterfaceContract.EventListener listener;
 
@@ -75,11 +75,19 @@ public class UserInterfaceImpl implements IUserInterfaceContract.View, EventHand
     }
 
     /*
+    @returns difficultyText
+     */
+    public static Text getDifficultyText() {
+        return difficultyText;
+    }
+
+    /*
     Draws basic UI
      */
     private void drawUI() {
         mistakesText = new Text("Mistakes: " + Mistakes.getMistakeCount());
         mistakesText.setFont(new Font(30));
+        difficultyText = new Text("Difficulty: "+ Difficulty.getCurrentDifficulty());
 
         Button newGameButton = new Button("New Game");
         newGameButton.setOnAction(event -> showDialog(Messages.NEW_GAME, Difficulty.getCurrentDifficulty()));
