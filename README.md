@@ -1,6 +1,6 @@
 # DesktopSudoku
 A JavaFX application which creates a Sudoku game with an interactive UI
-#
+
 # Features
 - Fully functional Sudoku Game
 - Optimal and Interactive UI
